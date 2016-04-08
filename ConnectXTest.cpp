@@ -89,3 +89,10 @@ TEST(ConnectXTest, check_constructor)
 	ConnectX connect((-2),(-3),3);
 	connect.showBoard();
 }
+
+// Checking inbound function for a negative width value and valid height value.
+TEST(ConnectXTest, check_at_ForNegativeW)
+{
+	ConnectX connect;
+	ASSERT_EQ((connect.at(-4,3)),-1);
+}
