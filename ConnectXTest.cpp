@@ -71,6 +71,17 @@ TEST(ConnectXTest, check_placePiece)
 	ASSERT_EQ(2 , connect.at(2,5));
 
 }
+
+// checks whether second player placed is placed at right place.
+TEST(ConnectXTest, check_placePiece2)
+{
+  ConnectX connect;
+	connect.placePiece(2);
+	ASSERT_EQ(2 , connect.at(2,5));
+	connect.placePiece(2);
+	ASSERT_EQ(1 , connect.at(2,4));
+
+}
 // Checks if piece is placed out of bounds and wheteher the user is toggeled.
 // Also checks toggelturn()
 TEST(ConnectXTest, check_placePiece_outofbound)
