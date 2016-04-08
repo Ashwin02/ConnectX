@@ -72,6 +72,7 @@ TEST(ConnectXTest, check_placePiece)
 
 }
 
+
 // checks whether second player placed is placed at right place.
 TEST(ConnectXTest, check_placePiece2)
 {
@@ -106,4 +107,11 @@ TEST(ConnectXTest, check_at_ForNegativeW)
 {
 	ConnectX connect;
 	ASSERT_EQ((connect.at(-4,3)),-1);
+}
+
+TEST(ConnectXTest, check_placePiece_ForNegativeW)
+{
+	ConnectX connect;
+	connect.placePiece(-4);
+	ASSERT_EQ((connect.whoseTurn()) , 1);
 }
